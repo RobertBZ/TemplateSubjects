@@ -10,17 +10,6 @@ namespace TemplateSubjects
 {
     public static class DataParser
     {
-        internal static string[] listExpression = {
-            @"([0-9]){7}",
-            @"[A-Z][^\d]+ ",
-            @"\b[A-Z]\d\b|\b[0-9]{2}\b|\b[0-9]\b|\b[0-9][A-Z]\b|\b[EDC]\b",
-            @"\b(?:LU|MA|MI|JU|VI|SA|DO)\b",
-            @"\b[0-9]{4}\b|\b[0-9]{3}\b",
-            @"\b[0-9]{4}(?!-)\b|\b[0-9]{3}(?!-)\b",
-            @"\([0-9]+\)|\([0-9]+[A-Z]\)",
-            @"\)([A-Z\s])+"
-        };
-
         public static List<Subject> Signatures(string text)
         {
             var splittedText = text.Split('\n');

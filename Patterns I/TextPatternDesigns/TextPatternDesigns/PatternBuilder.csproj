@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90F2E155-EF9B-4F47-B2A0-3902548F6FFD}</ProjectGuid>
+    <ProjectGuid>{36615555-8869-4D42-92CD-F61410726C59}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TemplateSubjects</RootNamespace>
-    <AssemblyName>TemplateSubjects</AssemblyName>
+    <RootNamespace>TextPatternDesigns</RootNamespace>
+    <AssemblyName>TextPatternDesigns</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,13 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CivilEngineer.cs" />
+    <Compile Include="House.cs" />
+    <Compile Include="HouseBuilder.cs" />
+    <Compile Include="HousePlan.cs" />
+    <Compile Include="Houses\IglooHouseBuilder.cs" />
+    <Compile Include="Houses\TipiHouseBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UtilPfd.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

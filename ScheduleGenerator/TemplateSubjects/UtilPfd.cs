@@ -11,7 +11,7 @@ namespace TemplateSubjects
 {
     public static class UtilPfd
     {
-        public static string GetData(string pdfFileName)
+        public static string ReadPDF(string pdfFileName)
         {
             StringBuilder result = new StringBuilder();
             PdfReader reader = new PdfReader(pdfFileName);
@@ -19,20 +19,20 @@ namespace TemplateSubjects
             for (int page = 1; page <= reader.NumberOfPages; page++)
             {
                 pageText = PdfTextExtractor.GetTextFromPage(reader, page);
-                result.Append(UseText(pageText));
+                result.Append(GetData(pageText));
             }
             reader.Close();
             return result.ToString();
         }
 
-        public static string UseText(string page)
+        public static string GetData(string page)
         {
             StringBuilder Line = new StringBuilder();
-            string[] splittedText = page.Split('\n');
+            var splittedText = page.Split('\n');
             string text;
             foreach (string textLine in splittedText)
             {
-                if (textLine != "" && textLine != "(*)")
+                if (textLine != "(*)")
                 {
                     char secondChar = textLine.ToCharArray().ElementAt(1);
                     char thirdChar = textLine.ToCharArray().ElementAt(2);
@@ -42,23 +42,8 @@ namespace TemplateSubjects
                         Line.Append(text);
                     }
                 }
-                
             }
             return Line.ToString();
-        }
-
-        public static void TextToModel(string text)
-        {
-            Regex rx = new Regex(@"\b(?<word>\w+)\s+(\k<word>)\b", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-
-            MatchCollection matches = rx.Matches(text);
-
-            for (int ctr = 0; ctr < matches.Count; ctr++)
-            {
-                Console.WriteLine("{0} repeated at positions and",
-                                  matches[ctr].Value);
-                Console.ReadKey();
-            }
         }
     }
 }

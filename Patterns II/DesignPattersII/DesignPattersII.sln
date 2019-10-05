@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternFacade", "DesignPattersII\PatternFacade.csproj", "{09E6E450-7F44-4193-97B9-FC1635321F03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternAdapter", "PatternAdapter\PatternAdapter.csproj", "{C2F90266-E842-438D-9B65-7200D82EECC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E6E450-7F44-4193-97B9-FC1635321F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E6E450-7F44-4193-97B9-FC1635321F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E6E450-7F44-4193-97B9-FC1635321F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E6E450-7F44-4193-97B9-FC1635321F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F90266-E842-438D-9B65-7200D82EECC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F90266-E842-438D-9B65-7200D82EECC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F90266-E842-438D-9B65-7200D82EECC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F90266-E842-438D-9B65-7200D82EECC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37F54B24-9201-4DCF-843F-5CDBC67F01E0}
+	EndGlobalSection
+EndGlobal
